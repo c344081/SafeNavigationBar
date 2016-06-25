@@ -122,17 +122,32 @@
     objc_setAssociatedObject(self, @selector(safe_navigationBarHidden), @(safe_navigationBarHidden), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
+- (BOOL)preferredOriginalNavigationBarHidden {
+    return objc_getAssociatedObject(self, @selector(preferredOriginalNavigationBarHidden));
+}
+
+- (void)setPreferredOriginalNavigationBarHidden:(BOOL)preferredOriginalNavigationBarHidden {
+    objc_setAssociatedObject(self, @selector(preferredOriginalNavigationBarHidden), @(preferredOriginalNavigationBarHidden), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
 - (void)safe_viewWillAppear:(BOOL)animated {
-    [self.navigationController setNavigationBarHidden:self.safe_navigationBarHidden animated:animated];
+    // the viewController should be the navigationController's childViewCpontroller
+    // in case the viewController has a childViewController, we don't want the childViewController
+    // to override the navigationBar's behavior
+    if (!self.preferredOriginalNavigationBarHidden && [self.parentViewController isKindOfClass:[UINavigationController class]]) {
+        [self.navigationController setNavigationBarHidden:self.safe_navigationBarHidden animated:animated];
+    }
     [self safe_viewWillAppear:animated];
 }
 
 - (void)safe_viewDidAppear:(BOOL)animated {
-    if (self.safe_navigationBarHidden) {
-        // in case user didn't finish pop
-        // need to restore the navigationBar
-        UINavigationBar *naviBar = [[UINavigationBar alloc] init];
-        [self.navigationController setValue:naviBar forKey:@"navigationBar"];
+    if (!self.preferredOriginalNavigationBarHidden && [self.parentViewController isKindOfClass:[UINavigationController class]]) {
+        if (self.safe_navigationBarHidden) {
+            // in case user didn't finish pop
+            // need to restore the navigationBar
+            UINavigationBar *naviBar = [[UINavigationBar alloc] init];
+            [self.navigationController setValue:naviBar forKey:@"navigationBar"];
+        }
     }
     
     // transition complete

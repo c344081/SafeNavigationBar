@@ -14,10 +14,12 @@
 
 
 @interface UIViewController (SafeNavigationBar)
-/** 是否能够滑动返回*/
+/// 是否能够滑动返回
 @property(nonatomic, assign) BOOL forbiddenGestureTransition;
-/** 是否需要设置统一的返回键*/
+/// 是否需要设置统一的返回键
 @property(nonatomic, assign) BOOL forbiddenBackButton;
-/** 安全隐藏导航栏 */
+/// 安全隐藏导航栏
 @property (nonatomic, assign) BOOL safe_navigationBarHidden;
+/// 使用原生的导航栏隐藏行为
+@property (nonatomic, assign) BOOL preferredOriginalNavigationBarHidden;
 @end
