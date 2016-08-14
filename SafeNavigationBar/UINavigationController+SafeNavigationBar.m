@@ -150,6 +150,14 @@
         }
     }
     
+    // incase wild behavior caused by statusBarStyle Change
+    // e.g previousVC has a different statusBar style
+    if (!self.navigationController.navigationBarHidden) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.navigationController.navigationBarHidden = self.safe_navigationBarHidden;
+        });
+    }
+    
     // transition complete
     self.navigationController.safe_isTransitioning = NO;
     
