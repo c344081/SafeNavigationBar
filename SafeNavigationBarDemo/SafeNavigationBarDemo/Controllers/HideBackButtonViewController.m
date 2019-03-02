@@ -8,6 +8,7 @@
 
 #import "HideBackButtonViewController.h"
 #import "UINavigationController+SafeNavigationBar.h"
+#import "UIViewController+Navigation.h"
 
 @interface HideBackButtonViewController ()
 
@@ -21,9 +22,8 @@
 }
 
 - (void)setupNavi {
-    self.forbiddenBackButton = YES;
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+    self.my_customBackItem = [[UIBarButtonItem alloc] initWithCustomView:button];
 }
 
 @end

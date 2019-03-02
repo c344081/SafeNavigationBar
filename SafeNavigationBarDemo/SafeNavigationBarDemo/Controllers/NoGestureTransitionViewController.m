@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.forbiddenGestureTransition = YES;
+    self.preferredGestureTransitionDisabled = YES;
 }
 
 

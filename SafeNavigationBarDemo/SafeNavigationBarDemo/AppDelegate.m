@@ -31,7 +31,7 @@
 }
 
 + (AppDelegate *)sharedAppdelegate {
-    return [UIApplication sharedApplication].delegate;
+    return (AppDelegate *)[UIApplication sharedApplication].delegate;
 }
 
 @end

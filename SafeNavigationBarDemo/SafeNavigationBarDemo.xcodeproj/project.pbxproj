@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B57328A222A95F100354C24 /* UIViewController+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B573288222A95EC00354C24 /* UIViewController+Navigation.m */; };
 		8BDC35571CFAE365007225C9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BDC35561CFAE365007225C9 /* main.m */; };
 		8BDC355A1CFAE365007225C9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BDC35591CFAE365007225C9 /* AppDelegate.m */; };
 		8BDC35601CFAE365007225C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BDC355E1CFAE365007225C9 /* Main.storyboard */; };
@@ -43,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8B573288222A95EC00354C24 /* UIViewController+Navigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Navigation.m"; sourceTree = "<group>"; };
+		8B573289222A95EE00354C24 /* UIViewController+Navigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Navigation.h"; sourceTree = "<group>"; };
 		8BDC35521CFAE365007225C9 /* SafeNavigationBarDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafeNavigationBarDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BDC35561CFAE365007225C9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8BDC35581CFAE365007225C9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -102,6 +105,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B57328B222A964500354C24 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8B573289222A95EE00354C24 /* UIViewController+Navigation.h */,
+				8B573288222A95EC00354C24 /* UIViewController+Navigation.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8B57328C222A966400354C24 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8BDC35971CFB03F3007225C9 /* HomeViewController.h */,
+				8BDC35981CFB03F3007225C9 /* HomeViewController.m */,
+				8BDC359A1CFB0413007225C9 /* OneViewControllerWithoutNaviBar.h */,
+				8BDC359B1CFB0413007225C9 /* OneViewControllerWithoutNaviBar.m */,
+				8BDC359D1CFB0425007225C9 /* TwoViewControllerWithoutNaviBar.h */,
+				8BDC359E1CFB0425007225C9 /* TwoViewControllerWithoutNaviBar.m */,
+				8BDC35A01CFB0432007225C9 /* OneViewControllerWithNaviBar.h */,
+				8BDC35A11CFB0432007225C9 /* OneViewControllerWithNaviBar.m */,
+				8BDC35A31CFB043F007225C9 /* TwoViewControllerWithNaviBar.h */,
+				8BDC35A41CFB043F007225C9 /* TwoViewControllerWithNaviBar.m */,
+				8BDC35A61CFB377C007225C9 /* NoGestureTransitionViewController.h */,
+				8BDC35A71CFB377C007225C9 /* NoGestureTransitionViewController.m */,
+				8BDC35A91CFB3831007225C9 /* HideBackButtonViewController.h */,
+				8BDC35AA1CFB3831007225C9 /* HideBackButtonViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		8BDC35491CFAE365007225C9 = {
 			isa = PBXGroup;
 			children = (
@@ -125,25 +158,13 @@
 		8BDC35541CFAE365007225C9 /* SafeNavigationBarDemo */ = {
 			isa = PBXGroup;
 			children = (
+				8B57328C222A966400354C24 /* Controllers */,
+				8B57328B222A964500354C24 /* Extensions */,
 				8BDC35881CFAE716007225C9 /* SafeNavigationBar */,
 				8BDC35581CFAE365007225C9 /* AppDelegate.h */,
 				8BDC35591CFAE365007225C9 /* AppDelegate.m */,
 				8BDC35891CFAE716007225C9 /* MyNavigationController.h */,
 				8BDC358A1CFAE716007225C9 /* MyNavigationController.m */,
-				8BDC35971CFB03F3007225C9 /* HomeViewController.h */,
-				8BDC35981CFB03F3007225C9 /* HomeViewController.m */,
-				8BDC359A1CFB0413007225C9 /* OneViewControllerWithoutNaviBar.h */,
-				8BDC359B1CFB0413007225C9 /* OneViewControllerWithoutNaviBar.m */,
-				8BDC359D1CFB0425007225C9 /* TwoViewControllerWithoutNaviBar.h */,
-				8BDC359E1CFB0425007225C9 /* TwoViewControllerWithoutNaviBar.m */,
-				8BDC35A01CFB0432007225C9 /* OneViewControllerWithNaviBar.h */,
-				8BDC35A11CFB0432007225C9 /* OneViewControllerWithNaviBar.m */,
-				8BDC35A31CFB043F007225C9 /* TwoViewControllerWithNaviBar.h */,
-				8BDC35A41CFB043F007225C9 /* TwoViewControllerWithNaviBar.m */,
-				8BDC35A61CFB377C007225C9 /* NoGestureTransitionViewController.h */,
-				8BDC35A71CFB377C007225C9 /* NoGestureTransitionViewController.m */,
-				8BDC35A91CFB3831007225C9 /* HideBackButtonViewController.h */,
-				8BDC35AA1CFB3831007225C9 /* HideBackButtonViewController.m */,
 				8BDC355E1CFAE365007225C9 /* Main.storyboard */,
 				8BDC35611CFAE365007225C9 /* Assets.xcassets */,
 				8BDC35631CFAE365007225C9 /* LaunchScreen.storyboard */,
@@ -251,7 +272,7 @@
 		8BDC354A1CFAE365007225C9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = c344081;
 				TargetAttributes = {
 					8BDC35511CFAE365007225C9 = {
@@ -322,6 +343,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B57328A222A95F100354C24 /* UIViewController+Navigation.m in Sources */,
 				8BDC358E1CFAE716007225C9 /* MyNavigationController.m in Sources */,
 				8BDC35A21CFB0432007225C9 /* OneViewControllerWithNaviBar.m in Sources */,
 				8BDC35A51CFB043F007225C9 /* TwoViewControllerWithNaviBar.m in Sources */,
@@ -395,13 +417,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -439,13 +471,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

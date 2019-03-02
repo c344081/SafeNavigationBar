@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.safe_navigationBarHidden = YES;
+    self.my_navigationBarHidden = YES;
 }
 - (IBAction)backBtnClicked:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];

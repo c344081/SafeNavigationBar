@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.safe_navigationBarHidden = YES;
+    self.my_navigationBarHidden = YES;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
